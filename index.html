@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadaf Fatima - Front-End Web Designer</title>
+    <link rel="icon" type="image/png" href="Favicon.jpeg">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Syne+Mono&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Your Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ============================================================
+       LOADER
+  ============================================================ -->
+    <div id="loader">
+        <div class="loader-text">Sadaf Fatima</div>
+        <div class="loader-bar-wrap">
+            <div class="loader-bar"></div>
+        </div>
+        <div class="loader-text" style="opacity:.4; font-size:.65rem;">BSc Creative Computing · Portfolio</div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
+    <div id="cursor-trail"></div>
+
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+    <nav id="main-nav">
+        <a href="#hero" class="nav-logo">SF.</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+    </nav>
+
+    <!-- ============================================================
+       HERO
+  ============================================================ -->
+    <section id="hero">
+        <div class="hero-eyebrow">BSc (Hons) Creative Computing · Class of 2026</div>
+        <h1 class="hero-name">
+            Sadaf<br>
+            <span class="line2">Fatima.</span>
+        </h1>
+        <p class="hero-tagline">
+            I build things at the intersection of <strong>design, code & creativity</strong>.
+            UI/UX designer and full-stack developer crafting beautiful,
+            functional digital experiences — from complete web platforms to generative art.
+        </p>
+        <div class="hero-buttons">
+            <a href="#work" class="btn-primary"><span>View My Work</span></a>
+            <a href="#contact" class="btn-secondary">Get In Touch</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-num">5+</div>
+                <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">3</div>
+                <div class="stat-label">Years Study</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">2</div>
+                <div class="stat-label">Disciplines</div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       ABOUT
+  ============================================================ -->
+    <section id="about">
+        <div class="section-label">01 — About Me</div>
+        <div class="about-grid">
+
+            <div class="about-photo-wrap reveal">
+                <div class="about-photo-placeholder">
+                    <img src="Sadaf.jpeg" class="about-photo" alt="Sadaf Fatima">
+                </div>
+            </div>
+
+            <div class="about-content reveal">
+                <div class="section-label">Who I Am</div>
+                <h2 class="section-title">Designer.<br>Developer.<br>Creative.</h2>
+                <p>
+                    I'm a <strong>final-year BSc Creative Computing student</strong>, passionate about crafting
+                    digital experiences that are as functional as they are beautiful. My work spans UI/UX design,
+                    full-stack web development, and creative coding — where logic meets emotion.
+                </p>
+                <p>
+                    Throughout my three years, I've developed a deep appreciation for <strong>human-centred
+                        design</strong>
+                    and clean engineering — from building complete e-commerce platforms to designing polished app
+                    prototypes and client-facing websites.
+                </p>
+                <div class="philosophy-box">
+                    <p>My design philosophy is rooted in the belief that the best digital products feel inevitable — so
+                        natural and intuitive that users forget someone built them. I build with empathy, iterate with
+                        purpose, and ship with craft.</p>
+                </div>
+                <div class="skills-list">
+                    <div class="skill-tag"><span class="dot"></span>JavaScript / React</div>
+                    <div class="skill-tag"><span class="dot"></span>Node.js / MongoDB</div>
+                    <div class="skill-tag"><span class="dot"></span>HTML / CSS</div>
+                    <div class="skill-tag"><span class="dot"></span>UI/UX Design</div>
+                    <div class="skill-tag"><span class="dot"></span>Figma / Adobe CC</div>
+                    <div class="skill-tag"><span class="dot"></span>Full Stack Dev</div>
+                    <div class="skill-tag"><span class="dot"></span>Generative Art</div>
+                    <div class="skill-tag"><span class="dot"></span>Responsive Design</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================================
+       WORK
+  ============================================================ -->
+    <section id="work">
+        <div class="projects-header">
+            <div>
+                <div class="section-label">02 — Selected Work</div>
+                <h2 class="section-title reveal">Things I've<br>Built &amp; Made.</h2>
+            </div>
+            <div class="filter-bar reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="code">Code</button>
+                <button class="filter-btn" data-filter="client">Client Work</button>
+            </div>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- 1: Full Stack E-Commerce — LARGE -->
+            <div class="project-card large reveal" data-category="code design">
+                <div class="project-thumb-placeholder p-color-1">
+                    <div class="thumb-icon">🛒</div>
+                </div>
+                <div class="project-overlay">
+                    <div class="overlay-content">
+                        <a href="https://gogifts-frontend.vercel.app" class="project-link" target="_blank">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">Full Stack</span>
+                        <span class="tag t2">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag t2">MongoDB</span>
+                    </div>
+                    <div class="project-title">Full Stack E-Commerce Platform</div>
+                    <div class="project-desc">A comprehensive gift shop website with complete Node.js/Express backend, MongoDB
+                                integration, authentication, shopping cart, order processing, and admin dashboard.</div>
+                    <a href="https://gogifts-frontend.vercel.app" class="project-link">Explore Project →</a>
+                </div>
+            </div>
+
+            <!-- 2: Figma App Prototype — MEDIUM -->
+            <div class="project-card medium reveal" data-category="design">
+                <div class="project-thumb-placeholder p-color-2">
+                    <div class="thumb-icon">📱</div>
+                </div>
+                <div class="project-overlay">
+                    <div class="overlay-content">
+                        <a href="https://www.figma.com/proto/5rFE50fXhC4pJ3hrWaonSh/MedCare?node-id=5-2&p=f&t=3QGPv1E9DZQWue8R-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A2" class="project-link" target="_blank">View Prototype →</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag t3">UI/UX Design</span>
+                        <span class="tag">Figma</span>
+                    </div>
+                    <div class="project-title">Figma App Prototype</div>
+                    <div class="project-desc">A fully interactive app prototype created in Figma, selected to be showcased on my
+                                university's website
+                                among the best app prototypes. Demonstrates UX/UI design skills, wireframing, and user
+                                flow planning.</div>
+                    <a href="https://www.figma.com/proto/5rFE50fXhC4pJ3hrWaonSh/MedCare?node-id=5-2&p=f&t=3QGPv1E9DZQWue8R-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A2" class="project-link">View Prototype →</a>
+                </div>
+            </div>
+
+            <!-- 3: Frontend E-Commerce — HALF -->
+            <div class="project-card half reveal" data-category="client design code">
+                <div class="project-thumb-placeholder p-color-3">
+                    <div class="thumb-icon">🏪</div>
+                </div>
+                <div class="project-overlay">
+                    <div class="overlay-content">
+                        <a href="https://gogiftscreations.vercel.app/" class="project-link" target="_blank">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">Frontend</span>
+                        <span class="tag t2">HTML / CSS / JS</span>
+                        <span class="tag t3">UI Design</span>
+                    </div>
+                    <div class="project-title">Frontend E-Commerce Website</div>
+                    <div class="project-desc">A beautiful gift shop website built with pure frontend technologies, featuring
+                                responsive design, product catalog, and modern UI/UX.</div>
+                    <a href="https://gogiftscreations.vercel.app/" class="project-link">Explore Project →</a>
+                </div>
+            </div>
+
+            <!-- 4: Mondial Group — HALF -->
+            <div class="project-card half reveal" data-category="client design code">
+                <div class="project-thumb-placeholder p-color-5">
+                    <div class="thumb-icon">✈️</div>
+                </div>
+                <div class="project-overlay">
+                    <div class="overlay-content">
+                        <a href="https://mondialgroup.onrender.com" class="project-link" target="_blank">View Live Site →</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag t3">Client Work</span>
+                        <span class="tag">Web Design</span>
+                        <span class="tag t2">Frontend</span>
+                    </div>
+                    <div class="project-title">Mondial Group — Travel &amp; Tourism</div>
+                    <div class="project-desc">A fully responsive front-end website for Mondial Group, a travel and tourism company.
+                                The site showcases destinations, services, and packages. The contact form integrates
+                                with the back-end to handle inquiries.</div>
+                    <a href="https://mondialgroup.onrender.com" class="project-link">View Live Site →</a>
+                </div>
+            </div>
+
+            <!-- 5: Portfolio Website — LARGE -->
+            <div class="project-card large reveal" data-category="code design">
+                <div class="project-thumb-placeholder p-color-4">
+                    <div class="thumb-icon">⚡</div>
+                </div>
+                <div class="project-overlay">
+                    <div class="overlay-content">
+                        <a href="#" class="project-link">View Source →</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">Portfolio</span>
+                        <span class="tag t2">Three.js</span>
+                        <span class="tag t3">Creative Coding</span>
+                        <span class="tag">Interaction Design</span>
+                    </div>
+                    <div class="project-title">Portfolio Website — This Site</div>
+                    <div class="project-desc">A hand-crafted, fully animated portfolio featuring a live Three.js 3D
+                        particle background, mouse parallax, custom cursor, scroll-triggered reveals, and a dark
+                        futuristic aesthetic — built in vanilla HTML, CSS, and JavaScript. Zero frameworks. Pure craft.
+                    </div>
+                    <a href="#" class="project-link">View Source →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================================
+       SKILLS
+  ============================================================ -->
+    <section id="skills">
+        <div class="section-label">03 — Expertise</div>
+        <h2 class="section-title reveal">What I Do<br>Best.</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card reveal">
+                <div class="skill-card-icon">⚡</div>
+                <div class="skill-card-title">Full Stack Development</div>
+                <div class="skill-card-desc">Building complete, production-ready web applications from database design
+                    to polished frontend — with a focus on clean architecture and excellent user experience.</div>
+                <div class="skill-bars">
+                    <div class="skill-bar-row">
+                        <div class="skill-bar-label"><span>HTML / CSS</span><span>95%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-row">
+                        <div class="skill-bar-label"><span>JavaScript / React</span><span>88%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-row">
+                        <div class="skill-bar-label"><span>Node.js / Express</span><span>82%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="82"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-row">
+                        <div class="skill-bar-label"><span>MongoDB / Databases</span><span>78%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="78"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="skill-card-icon">🎨</div>
+                <div class="skill-card-title">UI/UX Design</div>
+                <div class="skill-card-desc">Human-centred design practice from research and ideation through to
+                    high-fidelity prototypes and polished, tested design systems.</div>
+                <div class="skill-bars">
+                    <div class="skill-bar-row">
+                        <div class="skill-bar-label"><span>Figma / Prototyping</span><span>92%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-row">
+                        <div class="skill-bar-label"><span>Adobe Creative Suite</span><span>85%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-row">
+                        <div class="skill-bar-label"><span>UX Research</span><span>80%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-row">
+                        <div class="skill-bar-label"><span>Design Systems</span><span>82%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="82"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="skill-card-icon">🔮</div>
+                <div class="skill-card-title">Creative Coding &amp; Web</div>
+                <div class="skill-card-desc">Writing code as a creative medium — interactive canvas experiences,
+                    generative visuals, and animated interfaces that go far beyond the ordinary.</div>
+                <div class="skill-bars">
+                    <div class="skill-bar-row">
+                        <div class="skill-bar-label"><span>Three.js / Canvas API</span><span>78%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="78"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-row">
+                        <div class="skill-bar-label"><span>CSS Animation / Motion</span><span>88%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-row">
+                        <div class="skill-bar-label"><span>Responsive / Mobile</span><span>92%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-row">
+                        <div class="skill-bar-label"><span>Git / Version Control</span><span>80%</span></div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================================
+       EXPERIENCE
+  ============================================================ -->
+    <section id="experience">
+        <div class="section-label">04 — Journey</div>
+        <h2 class="section-title reveal">Education &amp;<br>Experience.</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item reveal">
+                <div class="timeline-date">2022 – 2026</div>
+                <div class="timeline-title">BSc (Hons) Creative Computing</div>
+                <div class="timeline-org">University · RAK, UAE</div>
+                <div class="timeline-desc">Three-year programme spanning interactive design, creative coding,
+                    human-computer interaction, full-stack development, and digital media. Developed expertise across
+                    both design and engineering disciplines. Expected 1st Class Honours.</div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-date">2024</div>
+                <div class="timeline-title">Mondial Group — Travel &amp; Tourism Website</div>
+                <div class="timeline-org">Freelance / Client Project</div>
+                <div class="timeline-desc">Designed and developed a complete travel and tourism website for Mondial
+                    Group — managing the full project lifecycle from client brief and visual direction through to a
+                    coded, deployed website.</div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-date">2023 – Present</div>
+                <div class="timeline-title">Freelance Designer &amp; Developer</div>
+                <div class="timeline-org">Self-Employed</div>
+                <div class="timeline-desc">Designing and building websites and digital experiences for clients
+                    end-to-end — from initial brief and UX research through to fully coded, deployed products.</div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-date">2022 – 2025</div>
+                <div class="timeline-title">Full Stack E-Commerce Platform</div>
+                <div class="timeline-org">Academic &amp; Personal Project</div>
+                <div class="timeline-desc">Architected and built a complete MERN stack e-commerce platform — showcasing
+                    full-stack engineering from authentication and product management through to cart, payments, and an
+                    admin dashboard.</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+    <section id="contact">
+        <div class="contact-inner">
+            <div class="section-label" style="justify-content: center;">05 — Contact</div>
+            <div class="contact-big reveal">Let's<br><span>Work</span><br>Together.</div>
+            <p class="contact-sub reveal">I'm actively looking for graduate roles in UI/UX design, front-end
+                development, and creative technology. If you think I'd be a good fit — let's talk.</p>
+
+            <div class="contact-links reveal">
+                <a href="#" class="contact-link" id="copyEmail"><span>✉</span> Email Me</a>
+                <a href="https://www.linkedin.com/in/sadaf-fatima-268302291" class="contact-link"
+                    target="_blank"><span>in</span> LinkedIn</a>
+                <a href="https://github.com/sadaffatima19" class="contact-link" target="_blank"><span>⌥</span>
+                    GitHub</a>
+                <a href="Sadaf_Fatima_CV.pdf" class="contact-link"><span>↓</span> Download CV</a>
+            </div>
+
+            <a href="fatimasadaf68@gmail.com" class="btn-primary" style="margin-top: 1rem;">
+                <span>Start a Conversation →</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+    <footer>
+        <div class="footer-copy">© 2025 <span>Sadaf Fatima</span> · Made with ❤️ and coffee</div>
+        <a href="#hero" class="footer-back">Back to Top ↑</a>
+    </footer>
+
+    <!-- Your JavaScript — loaded at the bottom so the DOM is ready -->
+    <script src="script.js"></script>
+
+    <script>
+        const emailBtn = document.getElementById("copyEmail");
+
+        emailBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const email = "fatimasadaf68@gmail.com";
+
+            navigator.clipboard.writeText(email).then(() => {
+                emailBtn.textContent = "Copied!";
+
+                setTimeout(() => {
+                    emailBtn.innerHTML = "<span>✉</span> Email Me";
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>
