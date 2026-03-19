@@ -3,7 +3,7 @@
 
 A hand-crafted, fully animated personal portfolio built in **vanilla HTML, CSS, and JavaScript** — zero frameworks, zero dependencies (except Three.js for the 3D background). Designed and developed from scratch with a dark futuristic aesthetic, scroll-triggered animations, and a live Three.js particle field.
 
-**Live Site →** [portfolio-kappa-steel-9nwgl6k8si.vercel.app](https://portfolio-kappa-steel-9nwgl6k8si.vercel.app)
+**Live Site →** [portfolio-sadaf-blog.vercel.app](https://portfolio-sadaf-blog.vercel.app/)
 
 ---
 
@@ -46,9 +46,7 @@ portfolio/
 ├── index.html          # All markup and section structure
 ├── styles.css          # All styling, animations, and responsive rules
 ├── script.js           # Three.js scene, cursor, scroll logic, interactions
-├── Sadaf.jpeg          # Profile photo
 ├── Favicon.jpeg        # Browser tab icon
-└── Sadaf_Fatima_CV.pdf # Downloadable CV
 ```
 
 ---
